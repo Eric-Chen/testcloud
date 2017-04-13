@@ -11,6 +11,7 @@
         <module>testboot</module>
         <module>cloudconfig</module>
         <module>registryserver</module>
+        <module>consumerboot</module>
     </modules>
 
     <packaging>pom</packaging>

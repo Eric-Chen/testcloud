@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>test-boot</artifactId>
+    <artifactId>consumerboot</artifactId>
 
     <dependencies>
         <dependency>
@@ -35,5 +35,4 @@
             <artifactId>spring-cloud-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
-
 </project>
