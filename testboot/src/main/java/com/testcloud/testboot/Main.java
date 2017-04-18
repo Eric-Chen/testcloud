@@ -1,7 +1,7 @@
 package com.testcloud.testboot;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -14,7 +14,8 @@ import org.springframework.context.annotation.ComponentScan;
 public class Main {
 
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+//        SpringApplication.run(Main.class, args);
+        new SpringApplicationBuilder(Main.class).web(true).run(args);
     }
 
 }
