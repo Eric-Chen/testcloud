@@ -1,10 +1,10 @@
 package com.testcloud.consumerboot.web;
 
-import com.netflix.discovery.DiscoveryClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * Created by eric on 17/04/2017.
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConsumerController {
 
     @Autowired
-    private DiscoveryClient discoveryClient;
-
+    private RestTemplate restTemplate;
 
     @RequestMapping("/consume")
-    public @ResponseBody String showConsume(){
-
+    public String showConsume(){
+        ResponseEntity<String> result = restTemplate.getForEntity("http://EUREKA.PROVIDER.1/test_new_api", String.class);
+        return result.getBody();
     }
 
 }
