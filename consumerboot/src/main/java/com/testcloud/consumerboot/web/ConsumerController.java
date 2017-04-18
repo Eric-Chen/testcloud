@@ -17,8 +17,10 @@ public class ConsumerController {
 
     @RequestMapping("/consume")
     public String showConsume(){
-        ResponseEntity<String> result = restTemplate.getForEntity("http://EUREKA.PROVIDER.1/test_new_api", String.class);
+        ResponseEntity<String> result = restTemplate.getForEntity("http://SERVICE-PROVIDER/test_new_api", String.class);
         return result.getBody();
     }
+
+
 
 }
